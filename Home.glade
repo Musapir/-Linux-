@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkImage" id="image1">
+    <property name="width_request">40</property>
+    <property name="height_request">25</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="double_buffered">False</property>
+    <property name="stock">gtk-find</property>
+  </object>
+  <object class="GtkWindow" id="home_window">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">首页</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center</property>
+    <property name="default_width">1000</property>
+    <property name="default_height">600</property>
+    <property name="gravity">north</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkStack" id="main_stack">
+            <property name="width_request">980</property>
+            <property name="height_request">500</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkFixed" id="order_top">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkButton" id="btn_refresh">
+                    <property name="label" translatable="yes">刷新</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="btn_refresh_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">400</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkScrolledWindow" id="order_list">
+                    <property name="width_request">980</property>
+                    <property name="height_request">440</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="shadow_type">in</property>
+                  </object>
+                  <packing>
+                    <property name="y">50</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="title" translatable="yes">订单列表</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="order_add">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">快递单号</property>
+                  </object>
+                  <packing>
+                    <property name="x">200</property>
+                    <property name="y">100</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">始发地址</property>
+                  </object>
+                  <packing>
+                    <property name="x">200</property>
+                    <property name="y">150</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">收货人</property>
+                  </object>
+                  <packing>
+                    <property name="x">200</property>
+                    <property name="y">250</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">收货地址</property>
+                  </object>
+                  <packing>
+                    <property name="x">200</property>
+                    <property name="y">200</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="kd_no">
+                    <property name="width_request">300</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="primary_icon_tooltip_text" translatable="yes">重复提交会覆盖原先的数据</property>
+                  </object>
+                  <packing>
+                    <property name="x">290</property>
+                    <property name="y">100</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="start_address">
+                    <property name="width_request">300</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">290</property>
+                    <property name="y">150</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="dest_address">
+                    <property name="width_request">300</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">290</property>
+                    <property name="y">200</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="user">
+                    <property name="width_request">300</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">290</property>
+                    <property name="y">250</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_submit">
+                    <property name="label" translatable="yes">提交</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="on_btn_submit_clicked" swapped="no"/>
+                    <accelerator key="Return" signal="clicked"/>
+                  </object>
+                  <packing>
+                    <property name="x">380</property>
+                    <property name="y">364</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="add_result">
+                    <property name="width_request">100</property>
+                    <property name="height_request">29</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <attributes>
+                      <attribute name="style" value="italic"/>
+                      <attribute name="foreground" value="#efef29292929"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">389</property>
+                    <property name="y">65</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">收货人电话</property>
+                  </object>
+                  <packing>
+                    <property name="x">200</property>
+                    <property name="y">300</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="user_phone">
+                    <property name="width_request">300</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">290</property>
+                    <property name="y">300</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">add_order</property>
+                <property name="title" translatable="yes">新增</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="order_check">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkEntry" id="input_search">
+                    <property name="width_request">300</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="placeholder_text" translatable="yes">请输入单号</property>
+                  </object>
+                  <packing>
+                    <property name="x">300</property>
+                    <property name="y">30</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_search">
+                    <property name="width_request">56</property>
+                    <property name="height_request">38</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="receives_default">False</property>
+                    <property name="events"/>
+                    <property name="double_buffered">False</property>
+                    <property name="image">image1</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="btn_search_clicked" swapped="no"/>
+                    <accelerator key="Return" signal="clicked"/>
+                  </object>
+                  <packing>
+                    <property name="x">600</property>
+                    <property name="y">30</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkGrid">
+                    <property name="width_request">980</property>
+                    <property name="height_request">100</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="double_buffered">False</property>
+                    <child>
+                      <object class="GtkAccelLabel">
+                        <property name="width_request">150</property>
+                        <property name="height_request">40</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">运单号</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel">
+                        <property name="width_request">150</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">始发地址</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel" id="ss_no">
+                        <property name="width_request">150</property>
+                        <property name="height_request">40</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="margin_top">2</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel" id="ss_start">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel">
+                        <property name="width_request">150</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">收货地址</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel">
+                        <property name="width_request">150</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">收货人姓名</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">3</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel">
+                        <property name="width_request">150</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">收货人电话</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">4</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel">
+                        <property name="width_request">150</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">状态</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">5</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel" id="ss_dest">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel" id="ss_user">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">3</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel" id="ss_phone">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">4</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAccelLabel" id="ss_status">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">5</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="y">100</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="ss_null">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <attributes>
+                      <attribute name="font-desc" value="Sans Bold Italic 18"/>
+                      <attribute name="foreground" value="#efef29292929"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">406</property>
+                    <property name="y">280</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page2</property>
+                <property name="title" translatable="yes">订单查询</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="about">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">作者：计算机161班萨拉伊丁
+	  
+           160401021</property>
+                    <attributes>
+                      <attribute name="font-desc" value="Sans Bold Italic 24"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">250</property>
+                    <property name="y">200</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">基于Linux的嵌入式物流管理系统</property>
+                    <attributes>
+                      <attribute name="font-desc" value="Sans Bold Italic 28"/>
+                      <attribute name="style" value="italic"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">180</property>
+                    <property name="y">90</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">about</property>
+                <property name="title" translatable="yes">关于</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">50</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFixed">
+            <property name="width_request">1000</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="btn_logout">
+                <property name="label" translatable="yes">注销</property>
+                <property name="width_request">100</property>
+                <property name="height_request">40</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="on_btn_logout_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="x">240</property>
+                <property name="y">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkStackSwitcher" id="switcher">
+                <property name="width_request">100</property>
+                <property name="height_request">40</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="stack">main_stack</property>
+              </object>
+              <packing>
+                <property name="y">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="user_name">
+                <property name="width_request">100</property>
+                <property name="height_request">40</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="x">340</property>
+                <property name="y">5</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

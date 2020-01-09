@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="window">
+    <property name="name">window</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">物流管理系统</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center</property>
+    <property name="default_width">600</property>
+    <property name="default_height">400</property>
+    <property name="gravity">center</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">132</property>
+            <property name="height_request">41</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_left">33</property>
+            <property name="margin_right">55</property>
+            <property name="margin_bottom">9</property>
+            <property name="label" translatable="yes">欢迎使用物流管理系统</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold Italic 20"/>
+              <attribute name="style" value="italic"/>
+              <attribute name="gravity-hint" value="strong"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">20</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">用户名：</property>
+          </object>
+          <packing>
+            <property name="x">110</property>
+            <property name="y">133</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">密码：</property>
+          </object>
+          <packing>
+            <property name="x">110</property>
+            <property name="y">196</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="txt_userName">
+            <property name="width_request">250</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="x">200</property>
+            <property name="y">135</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="txt_password">
+            <property name="width_request">250</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="visibility">False</property>
+            <property name="invisible_char">*</property>
+          </object>
+          <packing>
+            <property name="x">200</property>
+            <property name="y">195</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_login">
+            <property name="label" translatable="yes">登录</property>
+            <property name="name">btn_login</property>
+            <property name="width_request">110</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_btn_login_clicked" swapped="no"/>
+            <accelerator key="Return" signal="clicked"/>
+          </object>
+          <packing>
+            <property name="x">210</property>
+            <property name="y">275</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_cancle">
+            <property name="label" translatable="yes">取消</property>
+            <property name="name">btn_cancle</property>
+            <property name="width_request">100</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="btn_cancle_clicked_cb" after="yes" swapped="yes"/>
+          </object>
+          <packing>
+            <property name="x">350</property>
+            <property name="y">277</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_error">
+            <property name="width_request">100</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <attributes>
+              <attribute name="foreground" value="#efef29292929"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">203</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

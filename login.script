@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc login.c -o login `pkg-config --cflags --libs gtk+-3.0` -lsqlite3 -export-dynamic
+./login
